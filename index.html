@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+    <meta charset="utf-8"/>
+    <title>ImmersaLab | Immersive & Realistic Visualization</title>
+    <meta content="width=device-width, initial-scale=1" name="viewport"/>
+    <meta content="ImmersaLab specializes in cinematic visualizations, XR experiences, and AI avatars." name="description"/>
+    <meta content="ImmersaLab" name="author"/>
+
+    <!-- Stylesheets -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <!-- Bootstrap JavaScript & jQuery (Required for Dropdowns) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+
+    
+     <!-- Link to the External CSS File -->
+     <link rel="stylesheet" href="styles.css">
+
+    </style>
+</head>
+<section class="intro-section">
+    <h1><span class="highlight-text">ImmersaLab</span>: Where 3D Vision Becomes Immersive Reality</h1>
+    <p>We are a <span class="highlight-text">Creative Lab</span> specializing in high-end visualization, XR experiences, cinematic content, and AI avatars. Using Unreal Engine's cutting-edge technology, we bring your 3D models and ideas to life with unmatched realism and interactivity.</p>
+    <p>From cinematic animations to fully immersive XR training, our expertise in VFX, physics, and AI integration ensures the most advanced digital experiences.</p>
+</section>
+
+<body>
+    <div class="video-section">
+        <div class="video-container" onclick="location.href='sections.html#ai-avatars'">
+            <video class="scroll-video" muted playsinline loop>
+                <source src="videos/WebNarration.mp4" type="video/mp4">
+            </video>
+            <div class="video-overlay">AI AVATARS</div>
+        </div>
+    </div>
+    
+    <div class="video-section">
+        <div class="video-container" onclick="location.href='sections.html#cinematics'">
+            <video class="scroll-video" muted playsinline loop>
+                <source src="videos/WebGolemsCurse.mp4" type="video/mp4">
+            </video>
+            <div class="video-overlay">CINEMATICS</div>
+        </div>
+    </div>
+    
+    <div class="video-section">
+        <div class="video-container" onclick="location.href='sections.html#xr-experiences'">
+            <video class="scroll-video" muted playsinline loop>
+                <source src="videos/WebVRPreview.mp4" type="video/mp4">
+            </video>
+            <div class="video-overlay">XR EXPERIENCES</div>
+        </div>
+    </div>
+    
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container-fluid d-flex justify-content-between align-items-center">
+                <!-- Menu Button in the Leftmost Corner -->
+                <!-- Menu Button in the Leftmost Corner -->
+<div class="dropdown">
+    <button class="menu-btn btn btn-light" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+        <i class="fas fa-bars"></i>
+    </button>
+    <ul class="dropdown-menu">
+        <li><a class="dropdown-item" href="index.html">Home</a></li>
+        <li><a class="dropdown-item" href="sections.html">Sections</a></li>
+        <li><a class="dropdown-item" href="#contact" onclick="scrollToContact()">Contact</a></li>
+    </ul>
+</div>
+    
+                <!-- Centered ImmersaLab Title -->
+                <a class="navbar-brand mx-auto" href="index.html">ImmersaLab</a>
+            </div>
+        </nav>
+    </header>
+    
+    
+    <section class="info-section">
+        <div class="container">
+            <div class="row g-5">
+                <!-- Why Choose ImmersaLab -->
+                <div class="col-md-5 why-choose-section animate">
+                    <h2>Why Choose <span class="immersalab-text">ImmersaLab</span>?</h2>
+                    <ul>
+                        <li><i class="fas fa-check"></i> <strong>Photorealistic & Visually Stunning</strong> – Unreal Engine’s most advanced lighting, physics, and effects.</li>
+                        <li><i class="fas fa-check"></i> <strong>Customizable & Adaptive</strong> – Tailored solutions for different industries and artistic needs.</li>
+                        <li><i class="fas fa-check"></i> <strong>Seamless Cinematic & Interactive XR</strong> – Unique integration of both mediums.</li>
+                        <li><i class="fas fa-check"></i> <strong>AI-Enhanced Experiences</strong> – Intelligent, interactive avatars elevate immersion.</li>
+                    </ul>
+                </div>
+    
+                <!-- Spacer Column for Centered Space -->
+                <div class="col-md-2"></div>
+    
+                <!-- How It Works -->
+                <div class="col-md-5 how-it-works-section animate">
+                    <h2>How It Works</h2>
+                    <ul>
+                        <li><i class="fas fa-cube"></i> <strong>Bring Your 3D Model or Concept</strong> – Clients provide their designs, CAD files, or ideas.</li>
+                        <li><i class="fas fa-tasks"></i> <strong>Choose Your Experience</strong> – Cinematic animation, interactive XR, standalone avatar or hybrid approach.</li>
+                        <li><i class="fas fa-magic"></i> <strong>We Transform It</strong> – We create a stunning, immersive digital experience using Unreal Engine 5 and other cutting-edge software.</li>
+                        <li><i class="fas fa-rocket"></i> <strong>Delivery & Implementation</strong> – The final product is delivered for marketing, training, or interactive engagement.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+            <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <h2>📩 Contact Us</h2>
+            <p>Have questions or want to collaborate? Reach out to us!</p>
+            <form action="#" method="POST">
+                <div class="mb-3">
+                    <label for="name" class="form-label">Name</label>
+                    <input type="text" class="form-control" id="name" name="name" required>
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" class="form-control" id="email" name="email" required>
+                </div>
+                <div class="mb-3">
+                    <label for="message" class="form-label">Message</label>
+                    <textarea class="form-control" id="message" name="message" rows="4" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+
+    <script>
+    document.addEventListener('scroll', function() {
+        document.querySelectorAll('.scroll-video').forEach(video => {
+            const rect = video.getBoundingClientRect();
+            if (rect.top < window.innerHeight && rect.bottom > 0) {
+                video.play();
+            } else {
+                video.pause();
+            }
+        });
+    });
+
+    document.addEventListener("DOMContentLoaded", function () {
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('show');
+                }
+            });
+        }, { threshold: 0.3 });
+
+        document.querySelectorAll('.animate').forEach(el => observer.observe(el));
+    });
+
+    document.addEventListener("DOMContentLoaded", function () {
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('show');
+                }
+            });
+        }, { threshold: 0.3 });
+
+        document.querySelectorAll('.animate, .contact-section').forEach(el => observer.observe(el));
+    });
+
+    function scrollToContact() {
+        const contactSection = document.getElementById("contact");
+        if (contactSection) {
+            contactSection.scrollIntoView({ behavior: "smooth" });
+        }
+    }
+</script>
+</body>
+</html>

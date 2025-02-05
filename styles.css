@@ -1,0 +1,367 @@
+/* General Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Header */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 15px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+/* Navbar Brand (Centered ImmersaLab Text) */
+.navbar-brand {
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: color 0.3s ease, letter-spacing 0.3s ease;
+}
+
+.navbar-brand:hover {
+    color: #007bff; /* Change color on hover */
+    letter-spacing: 5px; /* Slight expansion */
+}
+
+/* Menu Button */
+.menu-btn {
+    font-size: 1.5rem;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+.menu-btn i {
+    color: #333;
+}
+
+.menu-btn:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+/* Dropdown Menu */
+.dropdown-menu {
+    border-radius: 8px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Intro Section */
+.intro-section {
+    margin-top: 80px; /* Adds space between the header and content */
+    text-align: center;
+    padding: 100px 20px;
+    background: #f4f4f4;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.intro-section h1, .why-choose-section h2, .how-it-works-section h2 {
+    font-size: 42px;
+    margin-bottom: 20px;
+    font-weight: 600;
+    color: #333;
+}
+
+.intro-section p {
+    font-size: 18px;
+    color: #666;
+    max-width: 800px;
+    margin: auto;
+    opacity: 0;
+    animation: fadeSlideIn 1.5s ease-in-out forwards;
+}
+
+/* Highlighted Text */
+.highlight-text {
+    font-weight: bold;
+    color: #000; /* Default black */
+    transition: color 0.3s ease;
+}
+
+/* Change color on hover for both Intro and Why Choose sections */
+.why-choose-section:hover li i, 
+.how-it-works-section:hover li i {
+    color: #007bff; /* Blue highlight */
+    transition: color 0.3s ease-in-out;
+}
+
+.why-choose-section:hover .immersalab-text {
+    color: #007bff; /* Blue highlight */
+    transition: color 0.3s ease-in-out;
+}
+
+
+/* Sections Layout */
+.info-section {
+    padding: 100px 20px;
+    background: #f4f4f4;
+}
+
+/* Why Choose & How It Works Sections */
+.why-choose-section, .how-it-works-section {
+    padding: 40px;
+    background: #e0e0e0;
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 1s ease-out, transform 1s ease-out, box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+/* Scroll Animation Trigger */
+.animate.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Hover Animation */
+.why-choose-section:hover, .how-it-works-section:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Video Section */
+.video-section {
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.video-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
+.scroll-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: filter 0.3s ease-in-out;
+}
+
+/* Video Overlay */
+.video-overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.4);
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 3rem;
+    font-weight: 300;
+    transition: all 0.3s ease-in-out;
+    text-transform: uppercase;
+}
+
+.video-container:hover .scroll-video {
+    filter: blur(5px);
+}
+
+.video-container:hover .video-overlay {
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    font-size: 3.2rem;
+    transform: scale(1.05);
+}
+
+/* Ensures "ImmersaLab" and "Creative Lab" highlight on hover in the intro section */
+.intro-section:hover .highlight-text {
+    color: #007bff; /* Blue highlight */
+    transition: color 0.3s ease-in-out;
+}
+
+/* Ensures "ImmersaLab" text highlights in the "Why Choose ImmersaLab" section */
+.why-choose-section:hover .immersalab-text {
+    color: #007bff; /* Blue highlight */
+    transition: color 0.3s ease-in-out;
+}
+
+/* Ensures icons change color when hovering over the section */
+.why-choose-section:hover li i, 
+.how-it-works-section:hover li i {
+    color: #007bff; /* Blue highlight */
+    transition: color 0.3s ease-in-out;
+}
+/* Default Section Styling - All sections start with a white background */
+.section-box {
+    background: #ffffff !important; /* Force white background */
+    padding: 40px;
+    margin: 40px 0;
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 1s ease-out, transform 1s ease-out, background 0.3s ease-in-out;
+}
+
+/* Scroll animation trigger */
+.section-box.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Hover Animation - Background Change */
+.section-box:hover {
+    background: #f0f0f0; /* Light gray background on hover */
+    transform: scale(1.03);
+    box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* AI Development Section */
+.ai-development {
+    background: transparent !important; /* No default background */
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 10px;
+    box-shadow: none;
+    text-align: center;
+}
+
+/* AI Development Section Title */
+.ai-development h2 {
+    font-size: 1.8rem;
+    color: #007bff;
+    margin-bottom: 10px;
+}
+
+/* AI Development Section Text */
+.ai-development p {
+    font-size: 1.2rem;
+    color: #555;
+    max-width: 800px;
+    margin: auto;
+}
+
+/* Contact Section Styling */
+.contact-section {
+    background: #f9f9f9;
+    padding: 80px 20px;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+/* Scroll animation trigger */
+.contact-section.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.contact-section h2 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.contact-section p {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+/* Contact Form Styling */
+.contact-section form {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.contact-section .form-control {
+    border-radius: 8px;
+    padding: 10px;
+    font-size: 1rem;
+}
+
+/* Send Message Button */
+.contact-section .btn {
+    width: 100%;
+    padding: 10px;
+    font-size: 1.2rem;
+    border-radius: 8px;
+    background: #ccc; /* Default: Light Gray */
+    color: #333;
+    border: none;
+    transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+/* Hover Effect: Button Turns Blue */
+.contact-section .btn:hover {
+    background: #007bff; /* Turns Blue on Hover */
+    color: white;
+}
+
+/* Menu Button Styling */
+.menu-btn {
+    font-size: 1.5rem;
+    border: none;
+    background: none;
+    cursor: pointer;
+    transition: transform 0.3s ease, color 0.3s ease; /* Animation for transformation */
+}
+
+.menu-btn i {
+    color: #333;
+    transition: transform 0.3s ease; /* Smooth icon rotation */
+}
+
+/* Animation when menu button is pressed */
+.menu-btn:focus i {
+    transform: rotate(90deg); /* Rotates the menu icon when pressed */
+    color: #007bff; /* Changes the color to blue when clicked */
+}
+
+/* Optional: Add some styling to highlight the menu when active */
+.menu-btn:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+
+
+
+/* Keyframe Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeSlideIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Keyframe Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeSlideIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+

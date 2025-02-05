@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <title>ImmersaLab - Sections</title>
+    <meta content="width=device-width, initial-scale=1" name="viewport"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <!-- Link to the External CSS File -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <style>
+        /* General Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Header */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 15px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+/* Navbar Brand (Centered ImmersaLab Text) */
+.navbar-brand {
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: color 0.3s ease, letter-spacing 0.3s ease;
+}
+
+/* Menu Button */
+.menu-btn {
+    font-size: 1.5rem;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+/* Intro Section */
+.intro-section {
+    margin-top: 80px;
+    text-align: center;
+    padding: 100px 20px;
+    background: #f4f4f4;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.intro-section h1, .why-choose-section h2, .how-it-works-section h2 {
+    font-size: 48px;  /* Increased font size */
+    margin-bottom: 20px;
+    font-weight: 600;
+    color: #333;
+}
+
+.intro-section p {
+    font-size: 20px; /* Larger text size */
+    line-height: 1.6;
+    color: #666;
+    max-width: 900px; /* Increased max-width */
+    margin: auto;
+    opacity: 0;
+    animation: fadeSlideIn 1.5s ease-in-out forwards;
+}
+
+/* Highlighted Text */
+.highlight-text {
+    font-weight: bold;
+    color: #000;
+    transition: color 0.3s ease;
+}
+
+/* Sections Layout */
+.info-section {
+    padding: 120px 20px;  /* Increased padding for more space */
+    background: #f4f4f4;
+}
+
+/* Why Choose & How It Works Sections */
+.why-choose-section, .how-it-works-section {
+    padding: 50px;  /* Increased padding */
+    background: #e0e0e0;
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+    font-size: 1.1rem;  /* Slightly larger text */
+}
+
+/* Hover Animation */
+.why-choose-section:hover, .how-it-works-section:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Spacer Between Boxes */
+.row.g-5 {
+    margin-bottom: 30px;  /* Adds spacing between rows */
+}
+
+/* Video Section */
+.video-section {
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.video-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
+/* Contact Section Styling */
+.contact-section {
+    background: #f9f9f9;
+    padding: 80px 20px;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.contact-section h2 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.contact-section p {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+/* Contact Form Styling */
+.contact-section form {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.contact-section .form-control {
+    border-radius: 8px;
+    padding: 10px;
+    font-size: 1rem;
+}
+
+.contact-section .btn {
+    width: 100%;
+    padding: 10px;
+    font-size: 1.2rem;
+    border-radius: 8px;
+    background: #ccc;
+    color: #333;
+    border: none;
+    transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.contact-section .btn:hover {
+    background: #007bff;
+    color: white;
+}
+
+/* Add space from the top without affecting the box size */
+#cinematic-visualization {
+    margin-top: 120px; /* Adjust this value for desired space */
+}
+/* Blue Box for AI Development */
+.ai-development-box {
+    background-color: #007bff; /* Blue background */
+    color: white; /* White text */
+    padding: 30px; /* Padding inside the box */
+    border-radius: 10px; /* Rounded corners */
+    margin-top: 40px; /* Adds space between sections */
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1); /* Optional: Adds a subtle shadow */
+}
+
+.ai-development-box h2 {
+    font-size: 1.8rem; /* Larger header size */
+    margin-bottom: 20px; /* Space below the heading */
+}
+
+.ai-development-box p {
+    font-size: 1.2rem; /* Adjusted font size */
+    line-height: 1.6; /* Line height for readability */
+    margin-bottom: 10px; /* Adds spacing between paragraphs */
+}
+
+/* Keyframe Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeSlideIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+
+/* Ensure the button stays in the leftmost corner on all screens */
+@media (max-width: 768px) {
+    .menu-btn {
+        margin-left: 5px; /* Adjusts based on screen size */
+    }
+}
+        #ai-avatars { background: #f4f4f4; }
+        #cinematics { background: #e0e0e0; }
+        #xr-experiences { background: #d4d4d4; }
+        h1 { font-size: 3rem; }
+    </style>
+</head>
+
+<!-- Bootstrap JavaScript & jQuery (Required for Dropdowns) -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+
+
+<!-- Link to the External CSS File -->
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <title>ImmersaLab - Sections</title>
+    <meta content="width=device-width, initial-scale=1" name="viewport"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="utf-8"/>
+        <title>ImmersaLab - Sections</title>
+        <meta content="width=device-width, initial-scale=1" name="viewport"/>
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet"/>
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet"/>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+    
+        <!-- Header Bar -->
+        <header>
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <div class="container-fluid d-flex justify-content-between align-items-center">
+                    <!-- Menu Button in the Leftmost Corner -->
+                    <div class="dropdown">
+                        <button class="menu-btn btn btn-light" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fas fa-bars"></i>
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="menuDropdown">
+                            <li><a class="dropdown-item" href="index.html">Home</a></li>
+                            <li><a class="dropdown-item" href="sections.html">Sections</a></li>
+                            <li><a class="dropdown-item" href="#contact" onclick="scrollToContact()">Contact</a></li>
+                        </ul>
+                    </div>
+                    <!-- Centered ImmersaLab Title -->
+                    <a class="navbar-brand mx-auto" href="index.html">ImmersaLab</a>
+                </div>
+            </nav>
+        </header>
+        
+        
+        
+    
+        <main class="container my-5">
+            <!-- Cinematic Visualization -->
+            <section id="cinematic-visualization" class="section-box animate">
+                <h1>🎬 Cinematic Visualization</h1>
+        
+                <h3>Key Features:</h3>
+                <div class="feature-item">
+                    <i class="fas fa-check"></i> <strong>Pre-rendered, photorealistic animations using <strong>Unreal Engine 5</strong>.</strong>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-check"></i> <strong>Advanced lighting, VFX, and physics-based interactions for lifelike visuals.</strong>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-check"></i> <strong>Cinematic storytelling to showcase products, architecture, or complex processes </strong>
+                    <br></br>
+                </div>
+        
+                <h3>Use Cases:</h3>
+                <div class="use-case-item">
+                    <i class="fas fa-arrow-right"></i> <strong>Marketing & Product Showcases</strong> – Present new designs with cinematic flair.
+                </div>
+                <div class="use-case-item">
+                    <i class="fas fa-arrow-right"></i> <strong>Architectural & Real Estate Previews</strong> – Bring blueprints and CAD models to life.
+                </div>
+                <div class="use-case-item">
+                    <i class="fas fa-arrow-right"></i> <strong>Industrial & Engineering Visualizations</strong> – Demonstrate machinery, workflows, and automation.
+                </div>
+                <div class="use-case-item">
+                    <i class="fas fa-arrow-right"></i> <strong>Entertainment & Concept Development</strong> – High-quality pre-rendered sequences for film and game pitches.
+                </div>
+                <br></br>
+            </section>
+        
+            <!-- XR Training -->
+            <section id="xr-training" class="section-box animate">
+                <h1>🕶️ XR Training & Interactive Visualization</h1>
+        
+                <h3>Key Features:</h3>
+                <div class="feature-item">
+                    <i class="fas fa-check"></i> <strong>Full <strong>VR/AR compatibility</strong> – Custom-built simulations for training and visualization.</strong>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-check"></i> <strong>AI-driven, real-time interactivity – Smart environments that adapt to users.</strong>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-check"></i> <strong>Custom-tailored solutions for specific industries and training scenarios.</strong>
+                    <br></br>
+                </div>
+        
+                <h3>Use Cases:</h3>
+                <div class="use-case-item">
+                    <i class="fas fa-arrow-right"></i> <strong>Industrial Training</strong> – Hands-on simulations for operating heavy machinery or safety protocols.
+                </div>
+                <div class="use-case-item">
+                    <i class="fas fa-arrow-right"></i> <strong>Medical Training & Surgery Simulations</strong> – Interactive VR models for medical professionals.
+                </div>
+                <div class="use-case-item">
+                    <i class="fas fa-arrow-right"></i> <strong>Corporate Training & Soft Skills Development</strong> – Virtual environments for employee training.
+                </div>
+                <div class="use-case-item">
+                    <i class="fas fa-arrow-right"></i> <strong>Architectural & Design Walkthroughs</strong> – Interactive real estate previews with real-time changes.
+                </div>
+                <br></br>
+            </section>
+        
+            <!-- AI Avatars Section -->
+<section id="ai-avatars" class="section-box animate">
+    <h1>🤖 AI Avatars & Virtual Assistants</h1>
+
+    <h3>Key Features:</h3>
+    <div class="feature-item">
+        <i class="fas fa-check"></i> <strong>Scripted Narration</strong> – AI avatars explain products, processes, or designs based on pre-written scripts.
+    </div>
+    <div class="feature-item">
+        <i class="fas fa-check"></i> <strong>Realistic Facial Animation</strong> – AI-powered lip-syncing and expressive gestures.
+    </div>
+    <div class="feature-item">
+        <i class="fas fa-check"></i> <strong>High-Fidelity Visuals</strong> – Utilizing Unreal Engine’s Metahuman technology for lifelike avatars.
+    </div>
+    <div class="feature-item">
+        <i class="fas fa-check"></i> <strong>Immersive XR Compatibility</strong> – AI avatars can function as interactive guides in VR/AR environments.
+    </div>
+    <br></br>
+
+
+    <h3>Use Cases:</h3>
+    <div class="use-case-item">
+        <i class="fas fa-arrow-right"></i> <strong>Product Demonstrations & Explainers</strong> – AI avatars narrate product features with engaging visual storytelling.
+    </div>
+    <div class="use-case-item">
+        <i class="fas fa-arrow-right"></i> <strong>Virtual Guides for XR Experiences</strong> – AI-driven characters assisting users in AR/VR applications.
+    </div>
+    <div class="use-case-item">
+        <i class="fas fa-arrow-right"></i> <strong>Corporate & Brand Ambassadors</strong> – AI avatars acting as digital brand representatives.
+    </div>
+    <div class="use-case-item">
+        <i class="fas fa-arrow-right"></i> <strong>Interactive Museum & Exhibition Guides</strong> – Providing historical or educational context in XR environments.
+    </div>
+
+    <!-- Blue Box for AI Development -->
+    <div class="ai-development-box">
+        <h2>🚀 AI-Powered Avatars in Development</h2>
+        <p>While we currently focus on pre-recorded narration and scripted animation, we are actively developing real-time AI-driven avatars capable of adaptive conversations and intelligent interaction within immersive environments.</p>
+        <p>These future AI avatars will enhance training, virtual assistants, and interactive storytelling with dynamic, responsive behavior.</p>
+    </div>
+</section>
+
+        
+            <!-- Hybrid Cinematic & XR -->
+            <section id="hybrid-experiences" class="section-box animate">
+                <h1>🌐 Hybrid Cinematic & XR Experiences</h1>
+        
+                <h3>Key Features:</h3>
+                <div class="feature-item">
+                    <i class="fas fa-check"></i> A perfect blend of cinematic storytelling and interactive XR.
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-check"></i> AI-driven adaptive narratives that evolve based on user interactions.
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-check"></i> Engaging, photorealistic worlds that feel alive.
+                </div>
+            </section>
+        </main>
+        
+    
+        <!-- Bootstrap JavaScript -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+        
+        <!-- Scroll Animation Script -->
+        <script>
+            function scrollToContact() {
+                const contactSection = document.getElementById("contact");
+                if (contactSection) {
+                    contactSection.scrollIntoView({ behavior: "smooth" });
+                }
+            }
+    
+            document.addEventListener("DOMContentLoaded", function () {
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add('show');
+                        }
+                    });
+                }, { threshold: 0.3 });
+    
+                document.querySelectorAll('.animate').forEach(el => observer.observe(el));
+            });
+        </script>
+    
+    </body>
+    </html>
+    
+    <!-- Bootstrap JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Scroll Animation Script -->
+    <script>
+        function scrollToContact() {
+            const contactSection = document.getElementById("contact");
+            if (contactSection) {
+                contactSection.scrollIntoView({ behavior: "smooth" });
+            }
+        }
+
+        document.addEventListener("DOMContentLoaded", function () {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('show');
+                    }
+                });
+            }, { threshold: 0.3 });
+
+            document.querySelectorAll('.animate').forEach(el => observer.observe(el));
+        });
+    </script>
+
+</body>
+</html>
+
+    <script>
+        function scrollToContact() {
+            const contactSection = document.getElementById("contact");
+            if (contactSection) {
+                contactSection.scrollIntoView({ behavior: "smooth" });
+            }
+        }
+
+        document.addEventListener("DOMContentLoaded", function () {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('show');
+                    }
+                });
+            }, { threshold: 0.3 });
+
+            document.querySelectorAll('.animate').forEach(el => observer.observe(el));
+        });
+    </script>
+
+</body>
+</html>
