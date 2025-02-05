@@ -1,2 +1,2 @@
-# ImmersaLabWebsite
+# immersalabwebsite
 ImmersaLab Website Repo
