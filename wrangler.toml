@@ -1,0 +1,6 @@
+name = "immersalab"
+type = "javascript"
+
+[[build]]
+command = "npm run build"  # Ensure this is correct for your project
+upload.format = "modules"
