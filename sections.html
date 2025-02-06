@@ -9,7 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
     <!-- Link to the External CSS File -->
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css?v=2">
     
     <style>
         /* General Styles */
@@ -206,6 +206,37 @@ header {
     margin-bottom: 10px; /* Adds spacing between paragraphs */
 }
 
+/* Navbar Offer Styling - Subtle Grey Background */
+.navbar-announcement {
+    background-color: transparent;
+    color: black;
+    padding: 8px 15px;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+/* Hover Effect: Blue Background with White Text */
+.navbar-announcement:hover {
+    background-color: #007bff; /* Turns blue on hover */
+    color: white;
+    cursor: pointer;
+}
+
+/* Navbar Offer Link Styling */
+.navbar-announcement a {
+    color: black; /* Default black text */
+    text-decoration: underline;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+}
+
+/* Hover Effect for Link */
+.navbar-announcement:hover a {
+    color: white; /* Turns white on hover */
+}
+
 /* Keyframe Animations */
 @keyframes fadeIn {
     from { opacity: 0; }
@@ -239,31 +270,32 @@ header {
 <link rel="stylesheet" href="styles.css">
 </head>
 <body> 
-         <header>
-            <nav class="navbar navbar-expand-lg navbar-light">
-                <div class="container-fluid d-flex justify-content-between align-items-center">
-                    <!-- Menu Button -->
-                    <div class="dropdown">
-                        <button class="menu-btn btn btn-light" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            <i class="fas fa-bars"></i>
-                        </button>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="index.html">Home</a></li>
-                            <li><a class="dropdown-item" href="sections.html">Sections</a></li>
-                            <li><a class="dropdown-item" href="#contact" onclick="scrollToContact()">Contact</a></li>
-                        </ul>
-                    </div>
-        
-                    <!-- Centered Title -->
-                    <a class="navbar-brand mx-auto" href="index.html">ImmersaLab</a>
-        
-                    <!-- Right-Aligned Announcement (Always Links to Offer Section on Index Page) -->
-<div class="navbar-announcement">
-    🚀 <strong>Three Free Projects This Month!</strong> <a href="index.html#offer-details">Learn More</a>
-</div>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container-fluid d-flex justify-content-between align-items-center">
+                <!-- Menu Button -->
+                <div class="dropdown">
+                    <button class="menu-btn btn btn-light" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="index.html">Home</a></li>
+                        <li><a class="dropdown-item" href="sections.html">Sections</a></li>
+                        <li><a class="dropdown-item" href="#contact" onclick="scrollToContact()">Contact</a></li>
+                    </ul>
                 </div>
-            </nav>
-        </header>
+    
+                <!-- Centered Title -->
+                <a class="navbar-brand mx-auto" href="index.html">ImmersaLab</a>
+    
+                <!-- Right-Aligned Announcement (Now Highlighted in Blue) -->
+                <div class="navbar-announcement">
+                    🚀 <strong>Three Free Projects This Month!</strong> <a href="index.html#offer-details">Learn More</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    
         
         
         
