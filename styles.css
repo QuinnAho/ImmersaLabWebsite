@@ -339,6 +339,101 @@ header {
     box-shadow: none;
 }
 
+/* Navbar Offer Styling - Subtle Grey Background */
+.navbar-announcement {
+    background-color: transparent;
+    color: black;
+    padding: 8px 15px;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+/* Hover Effect: Blue Background with White Text */
+.navbar-announcement:hover {
+    background-color: #007bff; /* Turns blue on hover */
+    color: white;
+    cursor: pointer;
+}
+
+/* Navbar Offer Link Styling */
+.navbar-announcement a {
+    color: black; /* Default black text */
+    text-decoration: underline;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+}
+
+/* Hover Effect for Link */
+.navbar-announcement:hover a {
+    color: white; /* Turns white on hover */
+}
+
+/* Move Offer Section Up */
+.offer-section {
+    background-color: white;
+    padding: 40px 20px;
+    text-align: center;
+    margin-top: 0px; /* Reduced space */
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    opacity: 0; 
+    transform: translateY(50px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+/* When the section is in view, it becomes visible */
+.offer-section.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+/* Style the Offer List */
+.offer-list {
+    list-style: none; /* Removes default bullet points */
+    padding: 0;
+    text-align: center; /* Centers the whole list */
+}
+
+/* Style Individual List Items */
+.offer-list li {
+    font-size: 18px;
+    margin-bottom: 15px; /* Adds spacing between items */
+    display: block; /* Makes sure each item is centered */
+    text-align: center; /* Ensures multi-line text stays centered */
+}
+
+/* Style Icons */
+.offer-list i {
+    color: #007bff; /* Blue icon color */
+    font-size: 20px;
+    margin-right: 8px;
+}
+
+/* Offer Section Animation */
+@keyframes fadeInBlue {
+    from {
+        color: black; /* Start as black */
+    }
+    to {
+        color: #007bff; /* Fade to blue */
+    }
+}
+
+/* Default State: Black Text & Icons */
+.offer-section strong,
+.offer-section i {
+    color: black;
+    transition: color 0.3s ease-in-out;
+}
+
+/* When Hovering Over the Section, Only These Words Turn Blue */
+.offer-section:hover p strong, /* Targets only the specific words in the paragraph */
+.offer-section:hover i {
+    color: #007bff; /* Turns blue when hovered */
+}
+
+
 
 
 
